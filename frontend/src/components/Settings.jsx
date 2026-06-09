@@ -46,7 +46,7 @@ const Settings = ({ onSettingsUpdate }) => {
         ...data,
         smsBookingTemplate: resolveBookingTemplate(
           data.smsBookingTemplate,
-          data.companyName || 'MAGGI TOOLS RENTALS'
+          data.companyName || 'Lions engineering and tool center'
         ),
         smsFollowupTemplate: data.smsFollowupTemplate || '',
         smsReturnTemplate: data.smsReturnTemplate || '',

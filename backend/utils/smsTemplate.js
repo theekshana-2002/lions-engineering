@@ -19,7 +19,7 @@ Total Price: {totalAmount}
 Paid: {advancePayment}
 Balance Due: {balanceAmount}
 {billLink}
-Contact Us: 0777778845
+Contact Us: 0772138344
 
 Thank you for choosing {companyName}!`;
 
@@ -43,7 +43,7 @@ function fmtOptionalMoney(v) {
 }
 
 function getCompanyName(settings) {
-  return 'MAGGI TOOL RENTALS';
+  return 'Lions engineering and tool center';
 }
 
 function normalizeSmsText(text) {
@@ -197,8 +197,8 @@ function applySmsTemplate(template, bookingData, settings, precomputed = {}) {
 
   let finalText = normalizeSmsText(result.replace(/LKR\s+LKR/gi, 'LKR'));
   finalText = finalText.replace(/raxwo\s+tools?\s+rentals?/gi, companyName);
-  if (!finalText.includes('0777778845')) {
-    finalText = `${finalText}\nContact Us: 0777778845`;
+  if (!finalText.includes('0772138344')) {
+    finalText = `${finalText}\nContact Us: 0772138344`;
   }
   return finalText;
 }

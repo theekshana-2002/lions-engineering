@@ -63,11 +63,18 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response && error.response.status === 401) {
-      console.warn('Unauthorized access (401). Token might be expired or invalid. Triggering logout.');
-      localStorage.removeItem('raxwo_auth_token');
-      localStorage.removeItem('raxwo_user_role');
-      localStorage.removeItem('raxwo_user_name');
-      window.dispatchEvent(new Event('raxwo_force_logout'));
+      const isLoginRequest = error.config && error.config.url && (
+        error.config.url.includes('/auth/login') || 
+        error.config.url.includes('auth/login')
+      );
+      
+      if (!isLoginRequest) {
+        console.warn('Unauthorized access (401). Token might be expired or invalid. Triggering logout.');
+        localStorage.removeItem('raxwo_auth_token');
+        localStorage.removeItem('raxwo_user_role');
+        localStorage.removeItem('raxwo_user_name');
+        window.dispatchEvent(new Event('raxwo_force_logout'));
+      }
     }
     return Promise.reject(error);
   }

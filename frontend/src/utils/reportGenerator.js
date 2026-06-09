@@ -34,7 +34,7 @@ export const generatePDFReport = ({ title, columns, data, filename }) => {
     doc.setFontSize(22);
     doc.setTextColor(37, 99, 235); // Professional Blue
     doc.setFont('helvetica', 'bold');
-    doc.text('RAXWO Tool Rentals', textStartX, 20);
+    doc.text('Lions engineering and tool center', textStartX, 20);
 
     // Subtitle / Slogan
     doc.setFontSize(10);
@@ -95,7 +95,7 @@ export const generatePDFReport = ({ title, columns, data, filename }) => {
         const pageHeight = doc.internal.pageSize.height;
         doc.setFontSize(8);
         doc.setTextColor(150);
-        doc.text('RAXWO Tool Rental System - Confidential Report', 14, pageHeight - 10);
+        doc.text('Lions engineering and tool center - Confidential Report', 14, pageHeight - 10);
         doc.text(`Page | ${pageCount}`, pageWidth - 14, pageHeight - 10, { align: 'right' });
       }
     });
@@ -159,7 +159,7 @@ export const generateInvoicePDF = (data, type = 'invoice') => {
   doc.setFontSize(24);
   doc.setTextColor(37, 99, 235);
   doc.setFont('helvetica', 'bold');
-  doc.text('RAXWO Tool Rentals', 14, 20);
+  doc.text('Lions engineering and tool center', 14, 20);
 
   doc.setFontSize(10);
   doc.setTextColor(100);

@@ -17,7 +17,7 @@ Total Price: {totalAmount}
 Paid: {advancePayment}
 Balance Due: {balanceAmount}
 {billLink}
-Contact Us: 0777778845
+Contact Us: 0772138344
 
 Thank you for choosing {companyName}!`;
 
@@ -143,7 +143,7 @@ function buildItemsBreakdown(bookingData = {}) {
 }
 
 function buildSampleBillLink() {
-  return 'View Bill: https://maggi-tools.netlify.app/bill/sample-token';
+  return 'View Bill: https://lions-engineering.netlify.app/bill/sample-token';
 }
 
 function migrateBookingTemplate(template) {
@@ -172,14 +172,14 @@ export function isLegacyShortTemplate(template) {
   return t.length < 120 && t.includes('Dear {clientName}');
 }
 
-export function resolveBookingTemplate(stored, companyName = 'MAGGI TOOL RENTALS') {
+export function resolveBookingTemplate(stored, companyName = 'Lions engineering and tool center') {
   if (isLegacyShortTemplate(stored)) {
     return DEFAULT_SMS_BOOKING_TEMPLATE.replace(/\{companyName\}/g, companyName);
   }
   return migrateBookingTemplate(stored).replace(/\{companyName\}/g, companyName);
 }
 
-export function previewSmsTemplate(template, companyName = 'MAGGI TOOL RENTALS') {
+export function previewSmsTemplate(template, companyName = 'Lions engineering and tool center') {
   const booking = { ...SAMPLE_BOOKING };
   const itemsList = booking.items || [];
   const accList = booking.accessories || [];
@@ -218,8 +218,8 @@ export function previewSmsTemplate(template, companyName = 'MAGGI TOOL RENTALS')
 
   let finalText = normalizeSmsText(result);
   finalText = finalText.replace(/raxwo\s+tools?\s+rentals?/gi, companyName);
-  if (!finalText.includes('0777778845')) {
-    finalText = `${finalText}\nContact Us: 0777778845`;
+  if (!finalText.includes('0772138344')) {
+    finalText = `${finalText}\nContact Us: 0772138344`;
   }
   if (!finalText.includes('View Bill:')) {
     finalText = `${finalText}\n${billLink}`;

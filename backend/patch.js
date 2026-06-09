@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://admin:RGG5NPRSQUcmbL3w@cluster0.hvutzoy.mongodb.net/raxwo_tool_rent')
+mongoose.connect('mongodb+srv://raxwotechnology_db_user:GKtKNcEUu62EJ5bw@cluster0.wknldyv.mongodb.net/raxwo_tool_rent?appName=Cluster0')
   .then(async () => {
     const db = mongoose.connection.db;
     const accs = await db.collection('accessories').find().toArray();

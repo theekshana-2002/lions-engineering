@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
 
 async function check() {
-  const uri = "mongodb+srv://admin:RGG5NPRSQUcmbL3w@cluster0.hvutzoy.mongodb.net/raxwo_tool_rent";
+  const uri = "mongodb+srv://raxwotechnology_db_user:GKtKNcEUu62EJ5bw@cluster0.wknldyv.mongodb.net/raxwo_tool_rent?appName=Cluster0";
   const client = new MongoClient(uri);
   try {
     await client.connect();

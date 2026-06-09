@@ -112,7 +112,7 @@ const Sidebar = ({ activeTab, setActiveTab, handleLogout, role, userName, isOpen
         </div>
         {!isCollapsed && (
           <div className="logo-text">
-            <span className="logo-subtitle">{appSettings?.companyName || 'TOOL RENTALS'}</span>
+            <span className="logo-subtitle">{appSettings?.companyName || 'Lions engineering and tool center'}</span>
           </div>
         )}
       </div>

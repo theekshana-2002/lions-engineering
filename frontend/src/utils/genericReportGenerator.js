@@ -18,10 +18,10 @@ const getDynamicSettings = async () => {
     return res.data;
   } catch (e) { console.warn('Settings fetch failed, using defaults'); }
   return {
-    companyName: 'RAXWO TOOL RENTALS',
+    companyName: 'Lions engineering and tool center',
     address: 'No. 241, Rajamaha Vihara Rd, Mirihana, Kotte.',
-    phone: '+94 775 085 815',
-    email: 'info@raxwo.com'
+    phone: '0772138344',
+    email: 'lionsengineeringcomapny@gmail.com'
   };
 };
 

@@ -5,10 +5,10 @@ import { amountToWords } from './numberToWords';
 import api from '../services/api';
 
 const COMPANY_DETAILS = {
-  name: 'MAGGI TOOL RENTALS',
+  name: 'Lions engineering and tool center',
   address: 'No. 241, Rajamaha Vihara Rd, Mirihana, Kotte.',
-  phones: ['+94 775 085 815', '+94 723 627 888', '+94 766 779 603'],
-  email: 'info@raxwo.com',
+  phones: ['0772138344'],
+  email: 'lionsengineeringcomapny@gmail.com',
   regNo: '73330'
 };
 
@@ -172,13 +172,13 @@ export const generateInvoicePDF = async (invoice, mode = 'download') => {
     doc.setFontSize(20);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(...THEME.primary);
-    doc.text(settings.name || 'MAGGI TOOL RENTALS', 55, 35);
+    doc.text(settings.name || 'Lions engineering and tool center', 55, 35);
     
     // Print Contact Number in header optionally
     doc.setFontSize(10);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(100);
-    doc.text(`Contact: ${(settings.phones && settings.phones[0]) || '0777778845'}`, 55, 42);
+    doc.text(`Contact: ${(settings.phones && settings.phones[0]) || '0772138344'}`, 55, 42);
 
     const drawDynamicHeader = (doc, title) => {
       drawSidePattern(doc);

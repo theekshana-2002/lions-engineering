@@ -1,16 +1,16 @@
 @echo off
-TITLE Raxwo Rent A Car System - Launcher
+TITLE Lions Engineering & Tool Center - Launcher
 COLOR 0B
 
 echo ===================================================
-echo   RAXWO RENT A CAR MANAGEMENT SYSTEM
+echo   LIONS ENGINEERING & TOOL CENTER SYSTEM
 echo ===================================================
 echo.
 echo [1/2] Launching Backend Server (Node.js) on port 5001...
-start "Raxwo-Backend" cmd /k "cd backend && npm run dev"
+start "Lions-Backend" cmd /k "cd backend && npm run dev"
 
 echo [2/2] Launching Frontend Interface (Vite)...
-start "Raxwo-Frontend" cmd /k "cd frontend && npm start"
+start "Lions-Frontend" cmd /k "cd frontend && npm start"
 
 echo.
 echo ===================================================
